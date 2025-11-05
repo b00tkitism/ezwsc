@@ -3,7 +3,6 @@ package ezwsc
 import (
 	"context"
 	"crypto/ecdsa"
-	"encoding/json"
 	"errors"
 	"strings"
 	"sync"
@@ -16,9 +15,8 @@ import (
 )
 
 var (
-	mu          sync.Mutex
-	svc         *libbox.BoxService
-	cancelGuard context.CancelFunc
+	mu  sync.Mutex
+	svc *libbox.BoxService
 )
 
 func IsRunning() bool {
@@ -50,14 +48,16 @@ func StartWithTunFD(ctx context.Context, fd int, server string, privateKeyHex st
 	}
 
 	tunCIDR := "10.66.0.1/24"
-	sbConfig, err := singbox.Config(ctx, server, priv, &singbox.Settings{
+	sbConfig, err := singbox.New(server, priv, singbox.Settings{
 		TunAddr: &tunCIDR,
+		WSCPath: "/wsc",
+		UseTLS:  false,
 	}, singbox.ModeTun)
 	if err != nil {
 		return err
 	}
 
-	confJSON, err := json.Marshal(sbConfig)
+	confJSON, err := sbConfig.JSON()
 	if err != nil {
 		return err
 	}
@@ -74,9 +74,6 @@ func StartWithTunFD(ctx context.Context, fd int, server string, privateKeyHex st
 	}
 
 	if ctx != nil {
-		var cancel context.CancelFunc
-		ctx, cancel = context.WithCancel(ctx)
-		cancelGuard = cancel
 		go func() { <-ctx.Done(); _ = Stop() }()
 	}
 
@@ -92,6 +89,5 @@ func Stop() error {
 	}
 	err := svc.Close()
 	svc = nil
-	cancelGuard = nil
 	return err
 }

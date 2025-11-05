@@ -36,8 +36,8 @@ github.com/crate-crypto/go-ipa v0.0.0-20240724233137-53bbb0ceb27a h1:W8mUrRp6NOV
 github.com/crate-crypto/go-ipa v0.0.0-20240724233137-53bbb0ceb27a/go.mod h1:sTwzHBvIzm2RfVCGNEBZgRyjwK40bVoun3ZnGOCafNM=
 github.com/cretz/bine v0.2.0 h1:8GiDRGlTgz+o8H9DSnsl+5MeBK4HsExxgl6WgzOCuZo=
 github.com/cretz/bine v0.2.0/go.mod h1:WU4o9QR9wWp8AVKtTM1XD5vUHkEqnf2vVSo6dBqbetI=
-github.com/crypto4people/zoro v0.0.0-20251105094721-b44f331f13cc h1:QyzIBn77YNBzhucfT4WSXB1zSD+137Rswqf/tWfiwdg=
-github.com/crypto4people/zoro v0.0.0-20251105094721-b44f331f13cc/go.mod h1:kjCqkzsAkeZsRCYtC3rgqVlVJgzLnz+z4IXyI0Bsgmk=
+github.com/crypto4people/zoro v0.0.0-20251105103818-3b394f81ddc4 h1:l4OBX8kbEaXbvLz2NowpcHGBHQpSXkLrLSgt5gqpyjQ=
+github.com/crypto4people/zoro v0.0.0-20251105103818-3b394f81ddc4/go.mod h1:kjCqkzsAkeZsRCYtC3rgqVlVJgzLnz+z4IXyI0Bsgmk=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=
