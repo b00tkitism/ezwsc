@@ -5,9 +5,9 @@ go 1.25.1
 replace github.com/sagernet/sing-box => github.com/b00tkitism/sing-box v0.0.0-20251104074138-82f60bf2b27f
 
 require (
-	github.com/crypto4people/zoro v0.0.0-20251105081037-6ab8a24f43b6
+	github.com/crypto4people/zoro v0.0.0-20251105094721-b44f331f13cc
 	github.com/ethereum/go-ethereum v1.16.7
-	github.com/sagernet/sing-box v0.0.0-00010101000000-000000000000
+	github.com/sagernet/sing-box v1.12.12
 )
 
 require (
